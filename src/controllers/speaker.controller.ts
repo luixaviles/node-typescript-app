@@ -1,12 +1,19 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
+import { ReflectiveInjector, Injector } from 'injection-js';
 import { JsonController, Param, Body, Get, Post, Put, Delete, Req, Res } from 'routing-controllers';
 import { Speakers, Speaker } from '../models/speaker';
 import { SpeakerRepository } from '../data/speaker-repository';
 
+const injector = ReflectiveInjector.resolveAndCreate([
+    SpeakerRepository
+  ]);
 @JsonController()
 export class SpeakerController {
+    private repository: SpeakerRepository;
 
-    repository: SpeakerRepository = new SpeakerRepository();
+    constructor() {
+        this.repository = injector.get(SpeakerRepository);
+    }
 
     @Get('/speakers')
     getAll() {

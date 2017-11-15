@@ -1,6 +1,9 @@
+import { Injectable } from 'injection-js';
+
 import { default as SPEAKERS } from './db';
 import { Speakers, Speaker } from '../models/speaker';
 
+@Injectable()
 export class SpeakerRepository {
     speakers: Speakers = SPEAKERS;
 
@@ -10,7 +13,6 @@ export class SpeakerRepository {
 
     get(id: number | string): Speaker {
         const array = this.speakers.results.filter(s => s.id.value === id);
-
         return array[0];
     }
 
@@ -22,11 +24,9 @@ export class SpeakerRepository {
     }
 
     update(id: string, speaker: Speaker): Speaker {
-        const index = this.speakers.results.findIndex((s:Speaker) => s.id.value === id);
+        const index = this.speakers.results.findIndex((s: Speaker) => s.id.value === id);
         this.speakers.results[index] = speaker;
 
         return speaker;
     }
-
-
 }
