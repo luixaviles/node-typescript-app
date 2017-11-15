@@ -8,5 +8,6 @@ const app = createExpressServer({
 });
 
 const PORT = 3000;
+
 app.listen(PORT);
-console.log('Running local server on port ', PORT);
+console.log(`Running local server on http://localhost:${PORT}/speakers`);
