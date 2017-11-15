@@ -1,7 +1,7 @@
 import { Injectable } from 'injection-js';
 
 import { default as SPEAKERS } from './db';
-import { Speakers, Speaker } from '../models/speaker';
+import { Speakers, Speaker } from '../../models/speaker';
 
 @Injectable()
 export class SpeakerRepository {
