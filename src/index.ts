@@ -1,9 +1,12 @@
 import 'reflect-metadata'; 
 import { createExpressServer } from 'routing-controllers';
-import { SpeakerController } from './controller/speaker/speaker.controller';
+import { SpeakerController } from './controllers/speaker.controller';
 
 const app = createExpressServer({
    controllers: [SpeakerController]
 });
 
-app.listen(3000);
+const PORT = 3000;
+
+app.listen(PORT);
+console.log('Running local server on port ', PORT);
