@@ -1,11 +1,14 @@
 # node-typescript-app
 A `node` server with a set of `RESTful` services using entirely `TypeScript` language.
 
-# Support this project
+## Support this project
 - Star GitHub repository :star:
 - Follow updates on [Twitter](https://twitter.com/luixaviles)
 
-# Features
+## Slides
+Please find some slides with the relevant code explanation here: [https://luixaviles.com/ng-colombia-2017](https://luixaviles.com/ng-colombia-2017)
+
+## Features
 - TypeScript language
 - Gulp tasks + TypeScript plugin
 - Experimental TypeScript decorators.
