@@ -1,4 +1,4 @@
-export class Name {
+export interface Name {
     first: string;
     last: string;
   }

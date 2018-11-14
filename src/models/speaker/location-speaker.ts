@@ -1,4 +1,4 @@
-export class LocationSpeaker {
+export interface LocationSpeaker {
     street: string;
     city: string;
     state: string;

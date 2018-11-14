@@ -1,4 +1,4 @@
-export class PictureSpeaker {
+export interface PictureSpeaker {
     large: string;
     medium: string;
   }
